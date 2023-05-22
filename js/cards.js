@@ -97,9 +97,6 @@ const content = [
     },
 ];
 
-const highlightedToShow = 6
-const archivedToShow = 8
-
 function sortPosts() {
     content.sort((a, b) => new Date(b.date) - new Date(a.date));
 };
@@ -109,7 +106,7 @@ function highlightedContent(e) {
     const target = document.querySelector('#content');
 
     if (target) {
-        const cards = content.slice(0, highlightedToShow).map(content => {
+        const cards = content.map(content => {
             const tagWithSpaces = content.tag.replace(/-/g, ' ');
 
             return `
@@ -137,41 +134,8 @@ function highlightedContent(e) {
     }
 };
 
-function archiveContent(e) {
-    const target = document.querySelector('#archive');
-
-    if (target) {
-        const cards = content.slice(highlightedToShow, highlightedToShow + archivedToShow).map(content => {
-            const tagWithSpaces = content.tag.replace(/-/g, ' ');
-
-            return `
-                <div class="card-wrapper">
-                    <img src="${content.img}" alt="${content.title}">
-                    <div class="card archive-card ${content.date} ${content.category} ${content.tag}">
-                        <div class="card-content">
-                            <p class="tag">
-                                ${tagWithSpaces}
-                            </p>
-                            <h5>
-                                ${content.title}
-                            </h5>
-                        </div>
-                        <a href="/posts/${content.link}" class="btn ghost">
-                            Lees meer
-                        </a>
-                    </div>
-                </div>
-            `;
-    
-        }).join('');
-    
-        target.innerHTML = cards;
-    }
-};
-
 
 $(document).ready(function() {
     sortPosts();
     highlightedContent();
-    archiveContent();
 });
