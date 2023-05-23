@@ -5,7 +5,9 @@
     --primary: #28a2f8;
     --white: #fff;
     --light-grey: #f8fcfe;
-    --black: #111320;
+    /* --black: #111320; */
+    /* --black: #1C1C1C; */
+    --black: #000000;
     --boxShadow: 0px 3px 6px #00000029;
     --borderRadius: 26px;
     --overlay: var(--black);
@@ -103,6 +105,7 @@ img {
 }
 
 .section.black {
+    color: var(--white);
     background-color: var(--black);
 }
 

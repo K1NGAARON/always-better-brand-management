@@ -1,7 +1,3 @@
-// function shuffleArray(array) {
-//     array.sort(() => Math.random() - 0.5);
-// };
-
 // STICKY LARGE MENU
 $(document).scroll(function () {
     const header = $('.header');

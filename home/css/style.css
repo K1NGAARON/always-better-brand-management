@@ -1,7 +1,5 @@
 .banner {
-    background-image: url('/home/img/banner.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 
 .banner .row {
@@ -11,6 +9,7 @@
 .banner h1,
 .banner p {
     color: var(--white);
+    width: 50%;
 }
 
 .banner,
@@ -19,8 +18,107 @@
     height: 90vh;
 }
 
-
 .banner .overlay {
     background: var(--overlay);
     opacity: 0.8;
+}
+
+.section .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section .filters .filter-btn {
+    color: var(--white);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.section .filters .filter-btn:hover {
+    cursor: pointer;
+}
+
+.section .filters .filter-btn.active {
+    opacity: 1;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+/* PROCESS */
+.process .row.flex-col {
+    align-items: center;
+}
+
+.process .wrapper {
+    width: 90%;
+    height: 60vh;
+}
+
+.process .wrapper .item {
+    gap: 0;
+}
+
+.process .wrapper .item:nth-of-type(1) {
+    flex: 1 0 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.process .wrapper .item:nth-of-type(2) {
+    color: var(--white);
+    flex: 1 0 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.process .wrapper .item .container:nth-child(1) {
+    flex: 1 0 40%;
+}
+
+.process .wrapper .item .container:nth-child(2) {
+    flex: 1 0 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.process .wrapper .item:nth-child(2) {
+    background-color: transparent;
+    background-image: url('https://blitz-media.io/home/img/process-background.svg');
+    background-size: cover;
+    background-position: revert;
+}
+
+.process .wrapper .item .container img {
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.process .wrapper .item ol {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 22px;
+}
+
+.process .wrapper .item li {
+    opacity: 0.3;
+    transition: opacity 200ms ease;
+}
+
+.process .wrapper .item li.active {
+    opacity: 1;
+    transition: opacity 200ms ease;
+}
+
+.process .wrapper .item li:hover {
+    cursor: pointer;
+}
+
+.process .wrapper h4 {
+    font-size: 26px;
+    font-weight: 600;
 }
