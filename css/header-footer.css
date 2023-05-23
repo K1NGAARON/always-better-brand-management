@@ -31,7 +31,7 @@
     border-color: var(--primary);
 }
 
-.header .row {
+.header.section .row {
     width: 100%;
     min-height: unset;
     align-items: center;
