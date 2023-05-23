@@ -102,6 +102,7 @@
 }
 
 .section .filters .filter-btn {
+    font-size: 30px;
     color: var(--white);
     opacity: 0.6;
     transition: var(--transition);
@@ -193,4 +194,22 @@
 .process .wrapper h4 {
     font-size: 26px;
     font-weight: 600;
+}
+
+.section.cta {
+    background-color: var(--white);
+}
+
+.section.cta .row .wrapper {
+    background-color: var(--black);
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: var(--borderRadius);
+
+    background-color: transparent;
+    background-image: url('https://blitz-media.io/home/img/process-background.svg');
+    background-size: cover;
+    background-position: revert;
 }

@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 56px;
 }
 
 h3 {
@@ -84,6 +84,7 @@ li {
 img {
     width: 100%;
     height: auto;
+    border-radius: var(--borderRadius);
 }
 
 .video-wrapper {
@@ -116,6 +117,10 @@ img {
     background-color: var(--light-grey);
 }
 
+.section .row.filter-row {
+    max-width: 1200px;
+}
+
 .section .row.grey {
     padding: 30px;
 }
@@ -136,6 +141,10 @@ img {
 .section .row.reverse {
     flex-flow: row-reverse wrap;
 }
+
+.section .row.reverse .filters {
+    align-items: flex-end;
+} 
 
 .section .row.flex-col {
     flex-direction: column;
