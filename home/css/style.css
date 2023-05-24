@@ -238,6 +238,10 @@
         margin-bottom: 0;
     }
 
+    .section .row {
+        margin: 40px auto;
+    }
+
     .logos.section .row .wrapper {
         gap: 10px;
         flex-flow: row wrap;
