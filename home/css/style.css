@@ -213,3 +213,46 @@
     background-size: cover;
     background-position: revert;
 }
+
+@media (max-width: 560px) {
+    .banner,
+    .banner .row,
+    .banner .overlay {
+        height: fit-content;   
+    }
+
+    .banner h1 {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .section .btn {
+        font-size: 12px;
+    }
+
+    .banner .row {
+        margin-bottom: 0;
+    }
+
+    .logos.section .row .wrapper {
+        gap: 10px;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .logos.section .row .wrapper .item {
+        flex: 0 1 25%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .section .row.reverse .filters {
+        align-items: flex-start;
+    }
+
+    .section .filters .filter-btn {
+        font-size: 20px;
+    }
+}
