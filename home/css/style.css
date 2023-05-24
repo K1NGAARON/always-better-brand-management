@@ -221,8 +221,12 @@
         height: fit-content;   
     }
 
+    .banner .scroll-down {
+        display: none;
+    }
+
     .banner h1 {
-        font-size: 26px;
+        font-size: 24px;
         width: 100%;
     }
 
@@ -254,5 +258,13 @@
 
     .section .filters .filter-btn {
         font-size: 20px;
+    }
+
+    .section .row.flex-col {
+        margin-bottom: 0;
+    }
+
+    .section .row.filter-row {
+        margin-top: 20px;
     }
 }
