@@ -1,162 +1,135 @@
-const processSteps = [
+const predictableGrowth = [
     {
-        headline: 'Kennismakingsgesprek',
-        body: "Er zijn heel wat zaken die gebeuren voordat we starten aan jouw project. We starten met een vrijblijvend kennismakingsgesprek om af te toetsen of we een goede match zijn. Hierin bekijken we ook de exacte doelen van het project en uiteindelijk komen we dan met een praktisch stap-voor-stap plan.",
-        img: 'https://blitz-media.io/home/img/planning.jpg'
-    },
-    {
-        headline: 'Digitaal voorbeeld',
-        body: "Tijdens deze periode is er maar 1 doel: een digitaal voorbeeld ontwerpen waar jij 100% tevreden mee bent. De input uit ons kennismakingsgesprek zal hier verwerkt worden.",
-        img: 'https://blitz-media.io/home/img/wireframe.jpg'
-    },
-    {
-        headline: 'Ontwikkeling',
-        body: "Eens het digitaal voorbeeld afgewerkt is beginnen we met de ontwikkeling van jouw custom website/webshop. Aangezien elke website volledig custom geprogrammeerd wordt zijn er hier absoluut geen limitaties aan wat er mogelijk is.",
-        img: 'https://blitz-media.io/home/img/development.jpg'
-    },
-    {
-        headline: 'Testen & Feedback',
-        body: "Na verschillende feedback ronde is de nieuwe website af en gaan we deze uitgebreid gaan testen zodat er zeker geen fouten zijn eens we lanceren. Wanneer de testen succesvol afgerond zijn is het tijd om jouw project te lanceren!",
-        img: 'https://blitz-media.io/home/img/feedback.jpg'
-    },
-    {
-        headline: 'Onderhoud',
-        body: "De samenwerking stopt uiteraard niet na het lanceren van jouw website. Blitz Media blijft het onderhoud van jouw website verzorgen.",
-        img: 'https://blitz-media.io/home/img/hosting.jpg'
-    }
-];
-
-function showProcess(e) {
-    let titleHolder = document.querySelector('#titleHolder');
-    let bodyHolder = document.querySelector('#bodyHolder');
-    let imageHolder = document.querySelector('#imageHolder');
-
-    let activeStep = e.target.id;
-
-    $('.step').removeClass('active');
-    $(this).addClass('active');
-
-
-    if (activeStep === 'discovery') {
-        $(titleHolder).text(processSteps[0].headline);
-        $(bodyHolder).text(processSteps[0].body);
-        $(imageHolder).attr('src', processSteps[0].img);
-    } else if (activeStep === 'wireframe') {
-        $(titleHolder).text(processSteps[1].headline);
-        $(bodyHolder).text(processSteps[1].body);
-        $(imageHolder).attr('src', processSteps[1].img);
-    } else if (activeStep === 'development') {
-        $(titleHolder).text(processSteps[2].headline);
-        $(bodyHolder).text(processSteps[2].body);
-        $(imageHolder).attr('src', processSteps[2].img);
-    } else if (activeStep === 'testing') {
-        $(titleHolder).text(processSteps[3].headline);
-        $(bodyHolder).text(processSteps[3].body);
-        $(imageHolder).attr('src', processSteps[3].img);
-    } else if (activeStep === 'hosting') {
-        $(titleHolder).text(processSteps[4].headline);
-        $(bodyHolder).text(processSteps[4].body);
-        $(imageHolder).attr('src', processSteps[4].img);
-    };
-
-};
-
-const servicesContent = [
-    {
-        title: "Facial Work",
-        id: "facial-work",
+        title: "Commercial Consulting",
+        id: "commercial-consulting",
         img: "https://reset.blitz-media.io/home/img/services/image1.jpg",
-        body: "facial work body",
+        body: "Commercial consulting",
     },
     {
-        title: "Accupuncture",
-        id: "accupuncture",
+        title: "Lead Generation",
+        id: "lead-generation",
         img: "https://reset.blitz-media.io/home/img/services/image2.jpg",
-        body: "accupuncture body",
+        body: "Lead Generation",
     },
     {
-        title: "Cupping",
-        id: "cupping",
+        title: "Lead Conversion",
+        id: "lead-conversion",
         img: "https://reset.blitz-media.io/home/img/services/image3.jpg",
-        body: "cupping body",
+        body: "Lead conversion",
     },
     {
-        title: "Movement Analysis",
-        id: "movement-analysis",
+        title: "Sales Funnels Set Up",
+        id: "sales-funnel",
         img: "https://reset.blitz-media.io/home/img/services/image4.jpg",
-        body: "movement analysis body",
+        body: "sales funnel set up",
     },
     {
-        title: "Breathwork Analysis",
-        id: "breathwork-analysis",
+        title: "Performance reporting",
+        id: "performance-reporting",
         img: "https://reset.blitz-media.io/home/img/services/image5.jpg",
-        body: "breathwork analysis body",
+        body: "performance reporting",
     },
     {
-        title: "Bloodwork Analysis",
-        id: "bloodwork-analysis",
+        title: "Marketing Management",
+        id: "marketing-management",
         img: "https://reset.blitz-media.io/home/img/services/image6.jpg",
-        body: "bloodwork analysis body",
+        body: "Mkt management",
+    },
+    {
+        title: "Content Creation",
+        id: "content-creation",
+        img: "https://reset.blitz-media.io/home/img/services/image6.jpg",
+        body: "Content Creation",
     },
 ];
 
-const experiencesContent = [
+const engagedCommunities = [
     {
-        title: "Breathwork classes",
-        id: "breathwork-classes",
+        title: "Community Analyse",
+        id: "community-analyse",
         img: "https://reset.blitz-media.io/home/img/services/image3.jpg",
-        body: "breathwork classes body",
+        body: "Communuty analyse",
     },
     {
-        title: "Bodywork classes",
-        id: "bodywork-classes",
+        title: "Community Event Strategie",
+        id: "community-event-strategy",
         img: "https://reset.blitz-media.io/home/img/services/image2.jpg",
-        body: "bodywork body",
+        body: "Community event strategie",
     },
     {
-        title: "Breathwork 1-on-1",
-        id: "breathwork",
+        title: "Event management",
+        id: "event-management",
         img: "https://reset.blitz-media.io/home/img/services/image1.jpg",
-        body: "breathwork body",
-    },
-    {
-        title: "Re set trips",
-        id: "reset-trips",
-        img: "https://reset.blitz-media.io/home/img/services/image4.jpg",
-        body: "re set body",
+        body: "Event management",
     },
 ];
 
-function filterServices(e) {
+const brandExperiences = [
+    {
+        title: "Brand Experience Analyse",
+        id: "brand-experience-analyse",
+        img: "https://reset.blitz-media.io/home/img/services/image3.jpg",
+        body: "Brand experience analyse",
+    },
+    {
+        title: "Brand Experience Strategy",
+        id: "brand-experience-strategy",
+        img: "https://reset.blitz-media.io/home/img/services/image2.jpg",
+        body: "Brand experience strategy",
+    },
+    {
+        title: "Offline Brand Development",
+        id: "offline-brand-development",
+        img: "https://reset.blitz-media.io/home/img/services/image1.jpg",
+        body: "Offline Brand Development",
+    },
+];
+
+
+function filterPredictableGrowth(e) {
     const filterWrapper = $(this).closest('.filters');
     filterWrapper.find('.filter-btn').removeClass('active');
     $(this).addClass('active');
 
     let activeFilter = $(this).attr('id');
 
-    const selectedService = servicesContent.find(service => service.id === activeFilter);
+    const selectedGrowth = predictableGrowth.find(growth => growth.id === activeFilter);
 
-    $('#service-img').attr('src', selectedService.img);
-    $('#service-body').text(selectedService.body);
+    $('#growth-img').attr('src', selectedGrowth.img);
+    $('#growth-body').text(selectedGrowth.body);
 };
 
-function filterExperiences(e) {
+function filterEngagedCommunities(e) {
     const filterWrapper = $(this).closest('.filters');
     filterWrapper.find('.filter-btn').removeClass('active');
     $(this).addClass('active');
 
     let activeFilter = $(this).attr('id');
 
-    const selectedExperience = experiencesContent.find(experience => experience.id === activeFilter);
+    const selectedCommunities = engagedCommunities.find(engagedCommunities => engagedCommunities.id === activeFilter);
    
-    $('#experiences-img').attr('src', selectedExperience.img);
-    $('#experiences-body').text(selectedExperience.body);
-}
+    $('#engagedCommunities-img').attr('src', selectedCommunities.img);
+    $('#engagedCommunities-body').text(selectedCommunities.body);
+};
+
+function filterBrandExperiences(e) {
+    const filterWrapper = $(this).closest('.filters');
+    filterWrapper.find('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    let activeFilter = $(this).attr('id');
+
+    const selectedBrandExperience = brandExperiences.find(brandExperiences => brandExperiences.id === activeFilter);
+   
+    $('#brandExperiences-img').attr('src', selectedBrandExperience.img);
+    $('#brandExperiences-body').text(selectedBrandExperience.body);
+};
 
 
 $(document).ready(function() {
-    $('.filters-services .filter-btn').click(filterServices);
-    $('.filters-experiences .filter-btn').click(filterExperiences);
+    $('.filters-predictable-growth .filter-btn').click(filterPredictableGrowth);
+    $('.filters-engaged-communities .filter-btn').click(filterEngagedCommunities);
+    $('.filters-brand-experiences .filter-btn').click(filterBrandExperiences);
 });
 
 
